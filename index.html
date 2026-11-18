@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Fire India Sensi Generator</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 16px;
+      background-color: #0b0f1a;
+      color: #ffffff;
+    }
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .header {
+      text-align: center;
+      padding: 10px 0 12px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      color: #ffffff;
+    }
+    .header p {
+      margin: 4px 0 0;
+      font-size: 18px;
+      font-weight: 700;
+      color: #44e0b8;
+    }
+    .subtitle {
+      text-align: center;
+      color: #ccd9eb;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+    label {
+      display: block;
+      font-size: 13.5px;
+      color: #e2e8f0;
+      margin: 10px 0 5px;
+    }
+    input, select {
+      width: 100%;
+      height: 44px;
+      padding: 0 12px;
+      border-radius: 6px;
+      border: 1px solid #2b354a;
+      background-color: #182032;
+      color: #ffffff;
+      font-size: 15px;
+      outline: none;
+    }
+    input:focus, select:focus {
+      border-color: #44e0b8;
+    }
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    button {
+      flex: 1;
+      height: 48px;
+      border: none;
+      border-radius: 8px;
+      background-color: #1ac79e;
+      color: #08121a;
+      font-weight: 800;
+      font-size: 14.5px;
+      letter-spacing: 0.3px;
+      cursor: pointer;
+    }
+    button.secondary {
+      background-color: #243047;
+      color: #44e0b8;
+      border: 1px solid #354666;
+    }
+    button:active {
+      opacity: 0.9;
+    }
+    .result-box {
+      margin-top: 16px;
+      padding: 14px;
+      border-radius: 12px;
+      background-color: #1a2436;
+      line-height: 1.55;
+      font-size: 14.5px;
+      color: #f1f5f9;
+      border: 1px solid #26334d;
+    }
+    .sensi-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .sensi-card {
+      background-color: #111827;
+      border: 1px solid #293650;
+      border-radius: 8px;
+      padding: 8px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .sensi-card span {
+      color: #cbd5e1;
+      font-size: 13px;
+    }
+    .sensi-card strong {
+      color: #44e0b8;
+      font-size: 15px;
+    }
+    .warn {
+      color: #ffcc66;
+      font-weight: 700;
+    }
+    .accent {
+      color: #44e0b8;
+      font-weight: 800;
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+    .muted {
+      color: #94a3b8;
+      font-style: italic;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>FREE FIRE INDIA</h1>
+      <p>DEVICE-WISE SENSI</p>
+    </div>
+    <div class="subtitle">Upar details bharo — niche sensitivity apne aap update hogi</div>
+
+    <label for="phone">Phone model</label>
+    <input type="text" id="phone" placeholder="e.g. Moto G45 5G / Samsung A15" oninput="generateSensi()" />
+
+    <label for="ram">RAM</label>
+    <select id="ram" onchange="generateSensi()">
+      <option value="Select RAM">Select RAM</option>
+      <option value="2 GB">2 GB</option>
+      <option value="3 GB">3 GB</option>
+      <option value="4 GB">4 GB</option>
+      <option value="6 GB">6 GB</option>
+      <option value="8 GB">8 GB</option>
+      <option value="12 GB or more">12 GB or more</option>
+    </select>
+
+    <label for="hz">Screen refresh rate</label>
+    <select id="hz" onchange="generateSensi()">
+      <option value="Select Hz">Select Hz</option>
+      <option value="60 Hz">60 Hz</option>
+      <option value="90 Hz">90 Hz</option>
+      <option value="120 Hz">120 Hz</option>
+      <option value="144 Hz">144 Hz</option>
+      <option value="165 Hz">165 Hz</option>
+      <option value="Not sure">Not sure</option>
+    </select>
+
+    <label for="fps">Game FPS setting</label>
+    <select id="fps" onchange="generateSensi()">
+      <option value="Select FPS">Select FPS</option>
+      <option value="30 FPS">30 FPS</option>
+      <option value="40 FPS">40 FPS</option>
+      <option value="60 FPS">60 FPS</option>
+      <option value="90 FPS">90 FPS</option>
+      <option value="120 FPS">120 FPS</option>
+      <option value="Not sure">Not sure</option>
+    </select>
+
+    <label for="fingers">Controls / fingers</label>
+    <select id="fingers" onchange="generateSensi()">
+      <option value="Select fingers">Select fingers</option>
+      <option value="2 fingers">2 fingers</option>
+      <option value="3 fingers">3 fingers</option>
+      <option value="4 fingers">4 fingers</option>
+      <option value="5 fingers">5 fingers</option>
+    </select>
+
+    <label for="style">Aim style</label>
+    <select id="style" onchange="generateSensi()">
+      <option value="Select style">Select style</option>
+      <option value="Balanced">Balanced</option>
+      <option value="Drag headshot">Drag headshot</option>
+      <option value="Precise aim">Precise aim</option>
+      <option value="Close-range rush">Close-range rush</option>
+    </select>
+
+    <label for="current">Current General sensitivity (optional)</label>
+    <input type="number" id="current" placeholder="0–200; blank if you don't know" min="0" max="200" oninput="generateSensi()" />
+
+    <div class="btn-row">
+      <button type="button" onclick="generateSensi()">GENERATE SENSITIVITY</button>
+      <button type="button" class="secondary" id="copyBtn" onclick="copySensi()" style="display:none;">COPY</button>
+    </div>
+
+    <div class="result-box" id="result">
+      <b>Upar ki settings select karte hi aapki device-wise sensitivity yahan turant dikh jayegi.</b>
+    </div>
+  </div>
+
+  <script>
+    let latestCopyText = "";
+
+    function generateSensi() {
+      const phone = document.getElementById("phone").value;
+      const ram = document.getElementById("ram").value;
+      const hz = document.getElementById("hz").value;
+      const fps = document.getElementById("fps").value;
+      const fingers = document.getElementById("fingers").value;
+      const style = document.getElementById("style").value;
+      const current = document.getElementById("current").value;
+      const resultEl = document.getElementById("result");
+      const copyBtn = document.getElementById("copyBtn");
+
+      if (!phone.trim() || ram === "Select RAM" || hz === "Select Hz" || fps === "Select FPS" || fingers === "Select fingers" || style === "Select style") {
+        copyBtn.style.display = "none";
+        resultEl.innerHTML = '<span class="warn">Phone model aur baaki sabhi options select karo — select hote hi sensitivity niche aa jayegi.</span>';
+        return;
+      }
+
+      const fingerBase = {
+        "2 fingers": [180, 172, 158, 140, 85, 130],
+        "3 fingers": [176, 168, 154, 138, 85, 130],
+        "4 fingers": [172, 165, 150, 135, 82, 128],
+        "5 fingers": [170, 162, 148, 132, 80, 125]
+      };
+      let vals = fingerBase[fingers].slice();
+
+      const fpsAdjust = {
+        "30 FPS": -8,
+        "40 FPS": -5,
+        "60 FPS": 0,
+        "90 FPS": 2,
+        "120 FPS": 3,
+        "Not sure": 0
+      };
+      const adjust = fpsAdjust[fps];
+      vals[0] += adjust;
+      vals[1] += adjust;
+      vals[2] += Math.round(adjust / 2);
+      vals[3] += Math.round(adjust / 2);
+
+      if (hz === "60 Hz" || hz === "Not sure") {
+        vals[0] -= 2;
+        vals[1] -= 2;
+      }
+
+      let deviceNote = "";
+      if (ram === "2 GB" || ram === "3 GB") {
+        vals[0] -= 3;
+        vals[1] -= 3;
+        deviceNote = "Kam RAM par background apps band rakho; stable FPS ko priority do.";
+      } else if (ram === "4 GB") {
+        deviceNote = "4 GB RAM: gameplay ke dauran FPS stable hai ya nahi, check karo.";
+      } else {
+        deviceNote = "RAM zyada hone se sensitivity automatically better nahi hoti.";
+      }
+
+      if (style === "Drag headshot") {
+        vals[0] += 8;
+        vals[1] += 8;
+      } else if (style === "Precise aim") {
+        vals[0] -= 10;
+        vals[1] -= 10;
+        vals[2] -= 6;
+        vals[3] -= 6;
+      } else if (style === "Close-range rush") {
+        vals[0] += 10;
+        vals[1] += 5;
+      }
+
+      let anchorNote = "";
+      if (current.trim() !== "") {
+        const c = Number(current.trim());
+        if (!Number.isInteger(c) || c < 0 || c > 200) {
+          copyBtn.style.display = "none";
+          resultEl.innerHTML = '<span class="warn">Current General value 0 se 200 ke beech rakho.</span>';
+          return;
+        }
+        const delta = Math.max(-15, Math.min(15, c - vals[0]));
+        vals[0] += delta;
+        vals[1] += Math.round(delta * 0.7);
+        anchorNote = `Current General setting ${c} ko reference banaya; small adjustment kiya.`;
+      }
+
+      vals = vals.map(v => Math.max(0, Math.min(200, parseInt(v, 10))));
+      const labels = ["General", "Red Dot", "2x Scope", "4x Scope", "Sniper Scope", "Free Look"];
+
+      latestCopyText = `Free Fire India Sensi (${phone.trim()} - ${ram}, ${hz}, ${fps}, ${fingers}, ${style}):\n` +
+        labels.map((name, idx) => `${name}: ${vals[idx]}/200`).join("\n");
+      copyBtn.style.display = "block";
+
+      let cardsHtml = '<div class="sensi-grid">';
+      for (let i = 0; i < labels.length; i++) {
+        cardsHtml += `<div class="sensi-card"><span>${labels[i]}</span><strong>${vals[i]}/200</strong></div>`;
+      }
+      cardsHtml += '</div>';
+
+      let html = `
+        <div class="accent">YOUR STARTING PRESET</div>
+        <div>Phone: ${escapeHtml(phone.trim())}</div>
+        <div>RAM: ${ram} | Screen: ${hz} | Game FPS option: ${fps}</div>
+        <div>Controls: ${fingers} | Style: ${style}</div>
+        ${cardsHtml}
+        <div>${deviceNote}</div>
+        ${anchorNote ? `<div>${anchorNote}</div>` : ""}
+        <br/>
+        <div><b>Fine-tune kaise karein:</b></div>
+        <div>Training Ground mein 5 points ke steps se General aur Red Dot adjust karo.</div>
+        <div>Aim target se aage nikalta hai to thoda kam; target tak nahi pahunchta to thoda badhao.</div>
+        <br/>
+        <div class="muted">Values estimates hain, guaranteed headshots nahi. Game ki current sensitivity scale verify karo.</div>
+      `;
+
+      resultEl.innerHTML = html;
+    }
+
+    function copySensi() {
+      if (!latestCopyText) return;
+      navigator.clipboard.writeText(latestCopyText).then(() => {
+        const btn = document.getElementById("copyBtn");
+        btn.textContent = "COPIED!";
+        setTimeout(() => { btn.textContent = "COPY"; }, 1500);
+      });
+    }
+
+    function escapeHtml(str) {
+      return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+  </script>
+</body>
+</html>
